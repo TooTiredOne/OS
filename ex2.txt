@@ -1,0 +1,129 @@
+    1  whoami
+    2  hostname
+    3  man whoami
+    4  pwd
+    5  gedit pop
+    6  gedit file
+    7  pwd
+    8  echo files
+    9  ls > files
+   10  la
+   11  ls
+   12  cat files
+   13  cat pop
+   14  gedit files
+   15  mv files new
+   16  mkdir ~/week1
+   17  cd ~/week1
+   18  man ls
+   19  ls ~
+   20  ls /usr/bin
+   21  ls /usr/bin -l
+   22  ls /usr/bin -1
+   23  ls *gcc*
+   24  ls /usr/bin *gcc*
+   25  cd usr/bin/
+   26  ~/bin
+   27  ssh -X kamilkamaliev@osc-3.edu.innopolis.ru
+   28  ssh -X kamilkamaliev@osc-18-3.edu.innopolis.ru
+   29  ssh -X kamilkamaliev@osc-[N].edu.innopolis.ru
+   30  cd /usr/bin
+   31  ls
+   32  ls *x
+   33  ls **
+   34  ls *partx*
+   35  grep gcc 
+   36  ls
+   37  cd ./week1
+   38  grep gcc /usr/bin
+   39  ls /usr/bin > list.txt
+   40  list.txt
+   41  gedit list.txt
+   42  grep gcc list.txt | sort -r > answer.txt
+   43  answer.txt
+   44  gedit answer.txt
+   45  grep gcc list.txt | sort -r |> answer.txt
+   46  gedit answer.txt
+   47  gedit list.txt
+   48  grep gcc list.txt | sort -r |tail -n 1495> answer.txt
+   49  grep gcc list.txt | sort -r |tail -n 1495 > answer.txt
+   50  gedit answer.txt
+   51  ls /usr/bin | sort -r| > list.txt
+   52  gedit list.txt
+   53  ls /usr/bin | sort -r| tail -n 1495> list.txt
+   54  ls /usr/bin | sort -r| tail -n 1495 > list.txt
+   55  gedit list.txt
+   56  grep gcc list.txt > answer.txt
+   57  gedit answer.txt
+   58  grep gcc list.txt
+   59  gedit list.txt
+   60  grep gcc list.txt > list.txt
+   61  grep gcc list.txt > answer.txt
+   62  gedit answer.txt
+   63  ls
+   64  gedit list.tzt
+   65  gedit list.txt
+   66  ls /usr/bin | sort -r| tail -n 1495 > list.txt
+   67  gedit list.txt
+   68  grep ab list.txt > answer.txt
+   69  gedit answer.txt
+   70  sude apt install build-essential
+   71  sudo apt install build-essential
+   72  whereis gcc make
+   73  gcc -v
+   74  ls
+   75  ./week1
+   76  cd ./week1
+   77  ls /usr/bin |sort -r| tail -n 1495 > list.txt
+   78  gedit list.txt
+   79  grep gcc list.txt > answer.txt
+   80  gedit answer.txt
+   81  ls /usr/bin > list.txt
+   82  gedit list.txt
+   83  ls /usr/bin |sort -r| tail -n 1562 > list.txt
+   84  grep gcc list.txt > answer.txt
+   85  gedit answer.txt
+   86  gedit ex1.txt
+   87  cd ./week1
+   88  gedit answer.txt
+   89  mv answer.txt ex1.txt
+   90  gedit ex1.txt
+   91  history
+   92  pwd
+   93  man sort
+   94  history > ex2.txt
+   95  gedit ex2.txt
+   96  jobs
+   97  date
+   98  sleep 3
+   99  nano
+  100  sh ex3.sh
+  101  gedit main.c
+  102  gcc main.c -o ex4
+  103  ./ex4
+  104  gedit ex3.sh
+  105  sh ex3.sh
+  106  gedit ex3.sh
+  107  sh ex3.sh
+  108  ls /usr/bin
+  109  ls /usr/bin sort -r
+  110  ls /usr/bin sort -r > list2.txt
+  111  ls /usr/bin |sort -r > list2.txt
+  112  gedit list2.txt
+  113  ls
+  114  cd ./week1
+  115  sh ex3.sh
+  116  ls /usr/bin
+  117  ls /usr/bin less
+  118  less
+  119  man less
+  120  ls /usr/bin | sort -r | q
+  121  ls /usr/bin sort -r
+  122  ls /usr/bin sort -r > list.txt
+  123  gedit list.txt
+  124  grep gcc list.txt > answer.txt
+  125  gedit answer.txt
+  126  mv answer.txt ex2.txt
+  127  mv ex2.txt ex1.txt
+  128  history
+  129  history > ex2.txt
