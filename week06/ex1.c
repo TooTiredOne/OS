@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#define SIZE 5
+#define SIZE 5 //len of strings
 
 int main(int argc, char const *argv[]) {
         char str1[SIZE] = "hello";
-        char str2[SIZE];
+        char str2[SIZE]; //empty string
 
         //creating a pipe
         int p[2];

@@ -17,6 +17,8 @@ int main()
         signal(SIGSTOP, handler);
         signal(SIGKILL, handler);
         signal(SIGUSR1, handler);
+
+        //infinite loop
         while (1);
         return 0;
 }

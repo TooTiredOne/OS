@@ -16,9 +16,9 @@ int main(int argc, char const *argv[]) {
         //creating the 1st child
         pid1 = fork();
 
-        if(pid1 == 0)
+        if(pid1 == 0) //in the 1st child
         {
-            pid_t pid;
+            pid_t pid; //this will store a pid of the 2nd child
             printf("the 1st child is reading pid of the 2nd child..\n");
             read(p[0], &pid, sizeof(pid));
 
@@ -40,10 +40,11 @@ int main(int argc, char const *argv[]) {
                 pid_t pid2;
 
                 //creating the 2nd child
-                pid2 = fork();
-                if(pid2 == 0)
+                pid2 = fork(); //stores pid of the 2nd child
+
+                if(pid2 == 0) //in the 2nd child
                 {
-                  while(1)
+                  while(1) //infinite loop
                   {
                     printf("hello from the 2nd child!\n");
                     sleep(1);
@@ -53,6 +54,7 @@ int main(int argc, char const *argv[]) {
                 {
                         //writing the pid2 to pipe
                         write(p[1], &pid2, sizeof(pid2));
+                        
                         int stat;
                         //waiting for the 2nd child
                         pid_t cpid = waitpid(pid2, &stat, 0);

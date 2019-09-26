@@ -12,6 +12,9 @@ void handle_sigint(int sig)
 int main()
 {
         signal(SIGINT, handle_sigint);
+
+        //infinite loop
         while (1);
+
         return 0;
 }

@@ -4,9 +4,9 @@
 
 int main()
 {
-        pid_t pid = fork();
+        pid_t pid = fork(); //stores child's pid
 
-        if(pid == 0)
+        if(pid == 0) //in child
         {
                 while(1)
                 {
@@ -14,9 +14,11 @@ int main()
                         sleep(1);
                 }
         }
-        else
+        else //in parent
         {
                 sleep(10);
+
+                //passing a signal to child
                 kill(pid, SIGTERM);
         }
 
@@ -34,5 +36,5 @@ I'm alive
 I'm alive
 I'm alive
 I'm alive
-I'm alive 
+I'm alive
 */

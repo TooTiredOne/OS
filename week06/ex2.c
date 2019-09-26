@@ -14,13 +14,14 @@ int main(int argc, char const *argv[]) {
         if(pipe(p) < 0)
                 exit(1);
 
-        if(fork() == 0)
+
+        if(fork() == 0) //in child
         {
-                read(p[0], str2, SIZE);
+                read(p[0], str2, SIZE); //reading from pipe
                 printf("From a child: %s\n", str2);
         }
-        else {
-                write(p[1], str1, SIZE);
+        else { //in parent
+                write(p[1], str1, SIZE); //writing to pipe
                 printf("hi from parent\n");
         }
 }
