@@ -1,0 +1,9 @@
+16-bit virtual address space
+8KB - size of a page
+
+As pages are 8 KB ( 2^13 bytes ) we need 13 bits for the byte offset within the page.
+so, the rest (16-13) bits are used to specify the virtual page.
+
+As a result, we can specify 2^(16-13) = 2^3 = 8 pages.
+
+So, there are 8 entries in the table. 

@@ -1,0 +1,3 @@
+A virtual address is an address of the data stored in virtual memory.
+Physical memory is backed by the hardware. Hence, it points to the existing memory. On the other hand, virtual address isn't actually backed by hardware. As a result, we cannot directly access virtual address for reading (we need to map the page to the physical memory). So, virtual address may be used to obtain the physical one (using page tables).
+
