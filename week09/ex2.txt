@@ -1,0 +1,20 @@
+the file input2_incr.txt contains a sequence that will increase the hit/miss ratio.
+it does so, as we have only 1 page. So, we'll have only 1 miss at the very beginning when the page table is empty.
+
+For the size of 10: hit/miss == 564/1
+
+For the size of 50: hit/miss == 564/1
+
+For the size of 100: hit/miss == 564/1
+
+
+
+
+the file input2_decr.txt contains a sequence that will decrease the hit/miss ratio. No number repeats in this sequence. So, we will never have a hit.
+
+For the size of 10: hit/miss == 0/50
+
+For the size of 50: hit/miss == 0/50
+
+For the size of 100: hit/miss == 0/50
+
