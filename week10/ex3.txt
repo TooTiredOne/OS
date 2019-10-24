@@ -1,0 +1,9 @@
+At the very beginning: -rw-r--r--
+After removing execute permission: -rw-r--r-- 
+(not much changed, heh)
+After granting all permissions to owner and others (not group): -rwxr--rwx
+After making group permissions equal to user permissions: -rwxrwxrwx
+
+660: owner's permissions: rw, group's permissions: rw, others have no permissions
+775: owner's and group's permissions: rwx, others permissions: rx
+777: everyone's permissions: rwx

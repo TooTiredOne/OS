@@ -1,0 +1,8 @@
+Command: find .. -inum 3933503
+Output:
+../week10/_ex2.txt
+../week01/file.txt
+
+Command: find -inum 3933503 -exec rm {} \;
+Output:
+
