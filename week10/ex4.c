@@ -6,9 +6,11 @@
 __ino_t  checked[20];
 int need_to_print[20];
 
+
+//if a link with i-node n was already met\checked
 int was_checked(__ino_t n, int size)
 {
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < size; i++)
     {
         if(n == checked[i])
             return 1;
@@ -20,10 +22,10 @@ int was_checked(__ino_t n, int size)
 
 int main()
 {
-    DIR *dirp = opendir("temp");
-    printf("HI");
-    __ino_t inodes[20];
-    char *names[20];
+    FILE *ouput = fopen("ex4.txt", "w"); //opening output file
+    DIR *dirp = opendir("./temp"); //opening temp folder
+    __ino_t inodes[20]; //to store inodes of files
+    char *names[20]; //to store names of files
 
     if(dirp == NULL)
     {
@@ -32,16 +34,19 @@ int main()
     }
 
     struct dirent *dp;
-    int count = 0, c = 0, c2 = 0;
+    int count = 0, c = 0, c2 = 0; //counters with creative names
 
+    //reading file names from stored in temp
     while((dp = readdir(dirp)) != NULL)
     {
-        names[count] = calloc(strlen(dp->d_name), sizeof(char));
-        names[count] = dp->d_name;
+        names[count] = calloc(strlen(dp->d_name), sizeof(char)); //reserving a space for a filename
+        //acquiring file name and inode to which it points
+        names[count] = dp->d_name; 
         inodes[count] = dp->d_ino;
         count++;
     }
 
+    //finding i-nodes with 2 or more hard links
     for(int i = 0; i < count-1; i++)
     {
         if(!was_checked(inodes[i], c2))
@@ -52,7 +57,7 @@ int main()
             {
                 if(inodes[i] == inodes[j])
                 {
-                    need_to_print[c] = j;
+                    need_to_print[c] = j; //marking the file for printing
                     c++;
                     break;
                 }
@@ -60,21 +65,23 @@ int main()
         }
     }
 
+    //printing those i-nodes
     for(int i = 0; i < c; i++)
     {
-        if(need_to_print[i])
+        for(int j = 0; j < count; j++)
         {
-            for(int j = 0; j < count; j++)
+            if(inodes[j] == inodes[need_to_print[i]])
             {
-                if(inodes[j] == inodes[need_to_print[i]])
-                {
-                    printf("%s ", names[j]);
-                }
+                fprintf(ouput, "%s ", names[j]);
             }
-
-            printf(":%ld\n", inodes[i]);
         }
+
+        fprintf(ouput, ":%ld\n", inodes[i]);
     }
+
+
+    closedir(dirp);
+    fclose(ouput);
 
 
     return 0;
