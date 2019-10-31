@@ -1,0 +1,5 @@
+the outputs are different because of Linear Buffer.
+
+The 1st program's buffer is not empty before fork(), so "child" program will have a buffer containing "Hello" which will be printed after passing new line symbol to printf(). As a result, Hello is printed 2 times.
+
+On the other hand, the 2nd program's buffer is empty before fork() (due to new line symbol after Hello), so childs buffer will be empty and it wont print Hello for the 2nd time
