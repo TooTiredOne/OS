@@ -1,0 +1,72 @@
+fileA size: 25 byte
+-DBUF_SIZE=1
+
+real	0m0,001s
+user	0m0,001s
+sys	0m0,000s
+-------------------------------------------
+fileA size: 1 kB
+-DBUF_SIZE=1
+
+real	0m0,003s
+user	0m0,003s
+sys	0m0,000s
+
+-------------------------------------------
+fileA size: 10,4 kB
+-DBUF_SIZE=1
+
+real	0m0,019s
+user	0m0,005s
+sys	0m0,014s
+
+-------------------------------------------
+fileA size: 10,4 kB
+-DBUF_SIZE=100
+
+real	0m0,001s
+user	0m0,001s
+sys	0m0,000s
+
+-------------------------------------------
+fileA size: 104,0 kB
+-DBUF_SIZE=1
+
+
+real	0m0,186s
+user	0m0,028s
+sys	0m0,158s
+-------------------------------------------
+fileA size: 104,0 kB
+-DBUF_SIZE=10
+
+real	0m0,022s
+user	0m0,000s
+sys	0m0,020s
+
+-------------------------------------------
+fileA size: 104,0 kB
+-DBUF_SIZE=100
+
+real	0m0,003s
+user	0m0,000s
+sys	0m0,003s
+-------------------------------------------
+
+fileA size: 6,2 MB
+-DBUF_SIZE=100
+
+real	0m0,126s
+user	0m0,037s
+sys	0m0,082s
+
+WITH  O_SYNC
+real	0m0,128s
+user	0m0,044s
+sys	0m0,076s
+
+Bigger file -> Slower copying
+Smaller file -> Faster copying
+
+Bigger Buffer -> Faster copying
+Smaller Buffer -> Slower copying
